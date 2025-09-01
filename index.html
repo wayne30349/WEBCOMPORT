@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STM32 VCP TEST </title>
+</head>
+<body>
+    <h1>E-Bike Dongle</h1>
+    <button id="connectButton">連接序列埠</button>
+    <button id="disconnectButton" disabled>斷開連接</button>
+    <button id="clearButton">清除顯示</button>
+    <br><br>
+    <label for="inputData">要發送的資料:</label>
+    <input type="text" id="inputData" placeholder="輸入資料..." disabled>
+    <button id="sendButton" disabled>發送資料</button>
+    <br><br>
+    <textarea id="output" rows="15" cols="50" readonly></textarea>
+	<hr>
+	<h2>封包解析結果</h2>
+	<div id="packet-data">
+		<p><strong>總里程 (ODO):</strong> <span id="odo">--</span> km</p>
+		<p><strong>總時間:</strong> <span id="total-time">--</span> 分</p>
+		<p><strong>單次里程:</strong> <span id="trip-dist">--</span> km</p>
+		<p><strong>單次時間:</strong> <span id="trip-time">--</span> 分</p>
+		<p><strong>剩餘里程:</strong> <span id="remain-dist">--</span> km</p>
+		<p><strong>電池電量:</strong> <span id="battery-percent">--</span> %</p>
+		<p><strong>錯誤碼旗標:</strong> <span id="error-flags">--</span></p>
+		<div id="error-details" style="font-size: 0.9em; color: red;"></div>
+	</div>
+    <script src="app.js"></script>
+</body>
+</html>
